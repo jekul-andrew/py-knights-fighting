@@ -1,4 +1,4 @@
-from app.config.config import knights, battle_queue
+from app.config.config import battle_queue
 from app.computed.knight import Knight
 from app.computed.battle import Battle
 
@@ -25,6 +25,3 @@ def battle(knights_config: dict) -> dict:
         result = result | battle_result
 
     return result
-
-
-print(battle(knights))

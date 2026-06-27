@@ -33,37 +33,3 @@ class Knight:
 
             if "hp" in effect:
                 self.hp += effect.get("hp", 0)
-
-
-if __name__ == "__main__":
-    from app.config.config import knights
-
-    # data = knights["lancelot"]
-    # lancelot = Knight(data)
-    # print(lancelot.__dict__)
-    # lancelot.recalculate_hp()
-    # print(lancelot.__dict__)
-    #
-    # print("--------------")
-    #
-    # data = knights["arthur"]
-    # lancelot = Knight(data)
-    # print(lancelot.__dict__)
-    # lancelot.recalculate_hp()
-    # print(lancelot.__dict__)
-
-    # print("--------------")
-    #
-    # data = knights["mordred"]
-    # lancelot = Knight(data)
-    # print(lancelot.__dict__)
-    # lancelot.recalculate_hp()
-    # print(lancelot.__dict__)
-
-    print("--------------")
-
-    data = knights["red_knight"]
-    lancelot = Knight(data)
-    print(lancelot.__dict__)
-    lancelot.recalculate_hp()
-    print(lancelot.__dict__)
