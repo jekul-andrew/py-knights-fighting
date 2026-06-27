@@ -1,4 +1,4 @@
-from app.computed.knight import Knight
+from app.game.knight import Knight
 
 
 class Battle:
@@ -7,7 +7,7 @@ class Battle:
         self.knight1 = knight1
         self.knight2 = knight2
 
-    def get_result(self) -> dict[str, int]:
+    def fight(self) -> dict[str, int]:
         knight1 = self.knight1
         knight2 = self.knight2
 

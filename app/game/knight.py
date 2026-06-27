@@ -25,11 +25,10 @@ class Knight:
 
             effect = self.potion.get("effect", {})
 
-            if "power" in effect:
-                self.power += effect.get("power", 0)
-
-            if "protection" in effect:
-                self.protection += effect.get("protection", 0)
-
-            if "hp" in effect:
-                self.hp += effect.get("hp", 0)
+            for stat in ["power", "protection", "hp"]:
+                if stat in effect:
+                    setattr(
+                        self,
+                        stat,
+                        getattr(self, stat) + effect.get(stat, 0)
+                    )

@@ -1,6 +1,6 @@
 from app.config.config import battle_queue
-from app.computed.knight import Knight
-from app.computed.battle import Battle
+from app.game.knight import Knight
+from app.game.battle import Battle
 
 
 def battle(knights_config: dict) -> dict:
@@ -19,7 +19,7 @@ def battle(knights_config: dict) -> dict:
         knight2 = knights_recalculated[label2]
 
         # === Battle === #
-        battle_result = Battle(knight1, knight2).get_result()
+        battle_result = Battle(knight1, knight2).fight()
 
         # merging to common result dict
         result = result | battle_result
