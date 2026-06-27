@@ -10,9 +10,9 @@ class Knight:
         self.protection = 0
 
         # ---------- Recalculate
-        self.recalculate_hp()
+        self.recalculate_stats()
 
-    def recalculate_hp(self) -> None:
+    def recalculate_stats(self) -> None:
 
         # Armour
         for protection in self.armour:
